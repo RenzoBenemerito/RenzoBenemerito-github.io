@@ -4,26 +4,19 @@ title: About
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+![Renzo Benemerito](/images/me.jpg){:class="me-image"}
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+Hi! I'm Renzo Benemerito, a Data Scientist from the Philippines, and this is my blog. I created this blog to show people how Artificial Intelligence or AI can help in their needs or pains in life.
 
-## Features
+If you would like to chat feel free to email me at [rbenemerito1@gmail.com](https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=rbenemerito1@gmail.com).
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
+If you would like to know more about me, feel free to view my [linkedin](https://www.linkedin.com/in/renzo-benemerito-66a663166/).
 
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+## Some Achievements
+
+- 2nd Place at the first-ever Machine Learning Hackfest by Senti AI (2019)
+- Graduated with Distinction (2019)
+- Winner at the firs-ever Emerson Innovation Challenge (2018)
+
+
+<!-- Here's a copy of my [resume](https://github.com/amitmerchant1990/reverie). -->

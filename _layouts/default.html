@@ -10,7 +10,7 @@
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
     <meta name="theme-color" content="#000000">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon.ico">
   </head>
 
   <body>
@@ -28,8 +28,7 @@
 
             <nav>
               <a href="{{ site.baseurl }}/">Home</a>
-              <a href="{{ site.baseurl }}/getting-started">Getting Started</a>
-              <a href="{{ site.baseurl }}/search">Search</a>
+              <!-- <a href="{{ site.baseurl }}/search">Search</a> -->
               <a href="{{ site.baseurl }}/about">About</a>
             </nav>
           </header>
@@ -45,7 +44,19 @@
       <div class="wrapper-footer">
         <div class="container">
           <footer class="footer">
-            {% include svg-icons.html %}
+            <!-- {% include svg-icons.html %} -->
+            <div class="footer-left">
+              <h4 class="footer-title">Renzo Benemerito</h4>
+              <br>
+              <p class="footer-text">Using AI for YOU</p>
+              <p class="footer-text">Email: rbenemerito1@gmail.com</p>
+            </div>
+            <div class="footer-right">
+              <a class="footer-icons" href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}"><i class="svg-icon linkedin"></i></a>
+              <a href="https://github.com/{{ site.footer-links.github }}"><i class="svg-icon github"></i></a>
+              <a href="mailto:{{ site.footer-links.email }}"><i class="svg-icon email"></i></a>
+            </div>
+            
           </footer>
         </div>
       </div>
