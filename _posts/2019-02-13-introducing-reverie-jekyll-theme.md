@@ -1,14 +1,26 @@
 ---
 layout: post
-title: Introducing Reverie - A ridiculously elegant Jekyll theme
-categories: [Miscellaneous, Jekyll]
+title: Hello World!~
+categories: [intro]
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a [Jekyll](https://jekyllrb.com/)-powered theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for my blog.
+Hello World, this is Renzo speaking or should I say blogging. This is my first blog post which will give you an introduction on why I created this blog and what this blog is going to be about. Let's get started.
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+![Machine Learning](/images/post-1.png){:class="img-med"}
+<p class="img-credits"> Img Source: <a href="https://medium.com/@ionejunhong/review-of-andrew-ngs-machine-learning-and-deep-learning-specialization-courses-on-coursera-4f9dc92437e4"> here</a></p>
 
-![](/images/reverie-demo.png)
+I started dabbling in Artificial Intelligence in the middle of 2018. My thesis project in college was going to involve Artificial Intelligence so I started studying about it early on. I started with Machine Learning by Andrew Ng on Coursera but could not finish it because my groupmates and I decided that we were going to incorporate deep learning as the heart of our thesis project. Thus, I shifted to the Deep Learning Specialization by, none other than, Andre Ng, again. I started with the first course Neural Networks and Deep Learning. One statement of his really stuck on to me and got me hooked into AI, {% include pullquote.html quote="&quot;AI is the new electricity.&quot;" %}
+
+For Andrew, Artificial Intelligence was about to bring about a wave of change in our way of life to the point that AI would be ubiquitous to our daily lives and that thinking really stuck to me. Come to think of it, AI is part of our daily lives more than we give it credit for. It found in the virtual assistants that you may or may not use. It is found on the shopping sites where you buy things that you don't even need but feel obligated to. It is found on your favorite music and video streaming services. It is found on your phone's camera.
+
+![Andrew Ng](/images/post-1.jpeg){:class="img-small"}
+<p class="img-credits"> Img Source: <a href="https://medium.com/datadriveninvestor/thoughts-on-andrew-ngs-machine-learning-course-7724df76320f"> here</a></p>
+
+The first lessons of the first course were simple enough because they were only general concepts. As the course progressed, a lot of Math was introduced which proved challenging even though I was an engineering student. Good thing Andrew, was a master of calming people down with one of his famous quoutes, "Don't worry about it if you don't understand." Finishing course 1, I stopped doing the specialization to focus on my thesis where I used a lot of the concepts of course 1 in doing the project.
+
+Finishing my thesis and eventually graduating, I resumed the deep learning specialization and started making jupyter notebooks detailing each lesson and even going "deeper", no pun intended, on some other topics in hopes to have something to go back to in case I forget some concepts. By doing this, I began to appreciate AI even more and highlighted some use cases I had in mind. I had many "hey I can use this concept for X and Y" moments where Andrew would explain something and I would think of a use case for myself where I could apply it. I remembered how Andrew viewed AI as the new electricity and thought of some use-cases so I could make AI truly ubiquitous in my life. Thus, I came up with this blog where I can share with you how I use Artificial Intelligence to address some of my needs in life no matter how quirky. In this blog, I hope to create tutorials, highlighting the premise of the use case and how I used AI to fill that use case, and, hopefully, talk about anything of interest for me in this blog.
+
+The title AI4U is literally the vision I have for Artificial Intelligence. I beleive AI should assist humanity and make people's lives easier. 
 
 ## Features overview
 

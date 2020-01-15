@@ -6,7 +6,7 @@
 name: AI4U
 
 # Name of the author
-author: Renzo Leru L. Benemerito
+author: Renzo Benemerito
 
 # Short bio or description (displayed in the header)
 description: AI for YOU
@@ -38,10 +38,10 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus: 
+disqus: ai4u
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: UA-43339302-11
+google_analytics: UA-156192624-1
 
 # Your website URL (e.g. http://amitmerchant1990.github.io or http://www.amitmerchant.com)
 # Used for Sitemap.xml and your RSS feed
