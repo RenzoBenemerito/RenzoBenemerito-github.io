@@ -40,6 +40,11 @@ html {
   width: 50%;
 }
 
+.img-small-hw{
+  width: 25%;
+  height: 25%;
+}
+
 body {
   background: #fff;
   font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -1185,5 +1190,5 @@ Modules - reusable parts of our design
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";
-@import "darcula";
+@import "monokai";
 @import "svg-icons";
