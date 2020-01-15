@@ -25,6 +25,6 @@ Finishing my thesis and eventually graduating, I resumed the deep learning speci
 ![AI4U](/images/logo.png){:class="img-small-hw"}
 <p class="img-credits"> Artificial Intelligence for You </p>
 
-Thus, I came up with this blog where I can share with you how I use Artificial Intelligence to address some of my needs in life no matter how quirky. The blog title title, AI4U (Artificial Inteligence for You), is literally the vision I have for Artificial Intelligence. I beleive AI should assist humanity and make people's lives easier. {% include pullquote.html quote="AI should be human-centric." %} It should be built not to replace humans but to coexist with humans to make life easier.
+Thus, I came up with this blog where I can share with you how I use Artificial Intelligence to address some of my needs in life no matter how quirky. The blog title, AI4U (Artificial Inteligence for You), is literally the vision I have for Artificial Intelligence. I believe AI should assist humanity and make people's lives easier. {% include pullquote.html quote="AI should be human-centric." %} It should be built not to replace humans but to coexist with humans to make life easier.
 
 In this blog, I hope to create tutorials, highlighting the premise of a use-case I have thought of and how I used AI to fill that use case. I'll be writing about how I structure my Machine Learning or Deep Learning projects and, occasionally, you'll see posts about Data Science since I am a Data Scientist by profession. That's it for now, thanks for reading!
