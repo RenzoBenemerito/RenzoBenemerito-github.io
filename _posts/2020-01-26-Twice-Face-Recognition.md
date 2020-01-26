@@ -5,7 +5,7 @@ categories: [Deep Learning, Facial Recognition]
 ---
 
 
- One busy day after school back in 2018, I was playing games on my computer while searching for music to play in the background on Youtube. Kpop was big on my school back then, so I gave it a try. From then on, I was hooked and became a fan. Twice was famous among my peers so I gave them a try as my first group to "stan." Watching one of their performances on Youtube, I encountered a problem that I'm sure many of those who are new to Kpop are very familiar with, they all look the same.
+ One busy day after school back in 2018, I was playing games on my computer while searching for music to play in the background on Youtube. Kpop was big on my school back then, so I gave it a try. From then on, I was hooked and became a fan. Twice was famous among my peers so I chose them as my first group to "stan." Watching one of their performances on Youtube, I encountered a problem that I'm sure many of those who are new to Kpop are very familiar with, they all look the same.
 
 ### Premise
 
@@ -33,7 +33,7 @@ I won't go deep in the technical discussion of how deep learning-based facial re
 
 2. Let's say you want to add another person to the list of people you want to recognize. Then, you will need to retrain the whole network.
 
-By learning a similarity function, we are able to solve the two problems above. Now, in order to learn this similarity function, a Siamese Network is used. This network is composed of two (although it may be composed of 3 depending on your methodology for training the network) identical networks with the same weights as shown in the image above. These networks generate feature maps or embeddings or encodings, depending on what you want to call them, which will differentiate between the inputs by computing their distance with each other. Ideally, similar inputs should have a small distance between them and different inputs should have a large distance.
+By learning a similarity function, we are able to solve the two problems above. Now, in order to learn this similarity function, a Siamese Network is used. This network is composed of two (although it may be composed of 3 depending on your methodology for training the network) identical networks with the same weights as shown in the image above. These networks generate feature maps or embeddings or encodings, depending on what you want to call them, which will differentiate between the inputs by computing the distance between them. Ideally, similar inputs should have a small distance between them and different inputs should have a large distance.
 
 
 ![Training a Siamese Network](/images/post-2-3.png)
