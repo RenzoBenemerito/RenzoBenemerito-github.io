@@ -197,4 +197,4 @@ The model performed well as shows below.
 
 <iframe width="100%" height="550px" src="https://www.youtube.com/embed/KKPjoQExAdA" frameborder="0" allowfullscreen></iframe>
 
-It was fun for me to create an AI project for Kpop. I hope my fellow "once" can benefit from this project. How about you? Which group do you stan? Did you mistake a member with another? If so, then try to replicate what I have done with your favorite group and don't be share to share your project in the comments! Til the next post.
+It was fun for me to create an AI project for Kpop. I hope my fellow "once" can benefit from this project. How about you? Which group do you "stan"? Did you mistake a member for another? If so, then try to replicate what I have done with your favorite group and don't be shy to share your project in the comments! Till the next post.
