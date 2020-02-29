@@ -40,7 +40,7 @@ For now, here are some supplementary material if you want to dig deeper:
 
 In addition, I included three techniques/jutsus that will render on the screen through the appropriate ordering of hand seals just to spice things up.
 
-The github repository for this project can be found ![here](https://github.com/RenzoBenemerito/Naruto-Hand-Seals-Classification)
+The github repository for this project can be found [here](https://github.com/RenzoBenemerito/Naruto-Hand-Seals-Classification)
 
 ### The Data
 
