@@ -40,7 +40,7 @@ For now, here are some supplementary material if you want to dig deeper:
 
 In addition, I included three techniques/jutsus that will render on the screen through the appropriate ordering of hand seals just to spice things up.
 
-The github repository for this project can be found here
+The github repository for this project can be found ![here](https://github.com/RenzoBenemerito/Naruto-Hand-Seals-Classification)
 
 ### The Data
 
@@ -68,6 +68,12 @@ I trained the network for 50 epochs with the `Adam` optimizer and `categorical c
 The model performed good as seen below. It classifies the frames in the video feed from my webcam in almost a real-time fashion while achieving accurate classification results. 
 
 <iframe width="100%" height="550px" src="https://www.youtube.com/embed/CteMigHFA_o" frameborder="0" allowfullscreen></iframe>
+
+You can test the system by running `run-webcam.py` from the github repository. It needs a model argument to specify the model to be used. You can use `mb.h5` for `MobileNetV2` or `sq.h5` for `Squeezenet`. Run the script as follows:
+
+```terminal
+python3 run-webcam.py -m "mb.h5"
+```
 
 You can also perform techniques by performing hand seals in sequence. Try the sequences below and see your technique rendered on the screen.
 
