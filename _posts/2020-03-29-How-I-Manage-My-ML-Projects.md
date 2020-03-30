@@ -12,7 +12,9 @@ Managing machine learning projects can be a daunting task without the proper too
 
 Do these look a bit familiar to you? This was how I tracked my documents, homeworks, and papers back when I was still studying and I'm sure, that this is also true for some of you who are reading. Each revision to the document would constitute a new filename and so on. Back in  my thesis days, I would also track my machine learning experiments in the same manner, by non-descriptive filenames as seen below:
 
-Each model would have a filename that had a number and the model that had the highest number was the latest and greatest. In addition, each dataset version would have a different filename and the dataset that had the word "new" in its filename would be the most effective dataset to train on.
+![My Thesis Directory](/images/post-4.png)
+
+Each model would have a filename that has a date and the model that has the latest date was the latest and greatest. In addition, each dataset version would have a different filename and the dataset that had the word "new" in its filename would be the most effective dataset to train on.
 
 Obviously, this isn't really an organized way of handling machine learning projects. I would often lose track of filenames and would have to redo quite a number of experiments. My project directory would be a mess with files that I don't even remember creating.
 
@@ -22,12 +24,12 @@ To track my machine learning experiments, I used tensorboard. Although, tensorbo
 
 With the ever-changing and evolving technology landscape, new tools have been created to supplement these changes. A decade ago, deep learning was unheard off, and remained a niche topic among researchers but now it has become a mainstream technology that every company seems to want to get a hand on. With this, new tools have been created for those creating these deep learning models.
 
-![Data Version Control](/images/post-4.png){:class="img-small-hw"}
+![Data Version Control](/images/post-4-1.png){:class="img-small-hw"}
 <p class="img-credits">Data Version Control</p>
 
 Data Version Control is an open-source version control system specifically made for Machine Learning. Its aim is to make ML experiments reproducible by versioning the datasets and artifacts of your experiments. It is built to handle the large files that compose a machine learning project and can integrate seamlessly with `git` and a variety of remote or local storages. As stated in their website, "DVC guarantees that all files and metrics will be consistent and in the right place to reproduce the experiment or use it as a baseline for a new iteration."
 
-![Weights and Biases](/images/post-4-1.png){:class="img-med"}
+![Weights and Biases](/images/post-4-2.png){:class="img-med"}
 <p class="img-credits">Weights and Biases</p>
 
 Weights and Biases is a machine learning experiment tracking system that helps data science and machine learning teams track their training expermients and visualize model performance. It is built to be framework agnostic, meaning it can integrate with any framework. In addition, you can log and explore just about anything in your experiment, from logging hyperparameters to visualizing the gradients of your model. It also, has a nice feature of creating your own graphs in the dashboard to visually compare your models better.
@@ -108,11 +110,11 @@ dvc push
 
 6) Go to weights and biases and create a project.
 
-![Wandb Project Creation](/images/post-4-2.png){:class="img-small"}
+![Wandb Project Creation](/images/post-4-3.png){:class="img-small"}
 
 7) Lastly, select your framework of choice. For the purposes of this tutorial, I'll use Keras.
 
-![Wandb Project Initialization](/images/post-4-3.png){:class="img-large"}
+![Wandb Project Initialization](/images/post-4-4.png){:class="img-large"}
 
 ### Workflow
 
@@ -122,17 +124,17 @@ Now let's walkthrough my previous machine learning project Naruto Hand Seals Cla
 
 1) Modify our training script to include the Wandb configuration as follows:
 
-![Wandb Project Configuration](/images/post-4-4.png){:class="img-large"}
+![Wandb Project Configuration](/images/post-4-5.png){:class="img-large"}
 
 This will be our experiment configuration. You can add additional fields to keep track off here.
 
-![Wandb Project Configuration](/images/post-4-5.png){:class="img-large"}
+![Wandb Project Configuration](/images/post-4-6.png){:class="img-large"}
 
 Don't forget to include the wandb callback to your `fit` function. In this case, I used Keras Image Data Generators so I used `fit_generator`
 
 2) Execute the training script and view your weights and biases dashboard.
 
-![Wandb Project Configuration](/images/post-4-6.png){:class="img-large"}
+![Wandb Project Configuration](/images/post-4-7.png){:class="img-large"}
 
 This is our experiment 1 dashboard, where we can see the progress of our training with accuracy, loss, validation accuracy and validation loss visualized in a graph.
 
@@ -140,15 +142,15 @@ To virualize the predictions at each step do the following:
 
 a) Click on add visualization.
 
-![Wandb Project Configuration](/images/post-4-7.png){:class="img-med"}
+![Wandb Project Configuration](/images/post-4-8.png){:class="img-med"}
 
 b) Select Image.
 
-![Wandb Project Configuration](/images/post-4-8.png){:class="img-med"}
+![Wandb Project Configuration](/images/post-4-9.png){:class="img-med"}
 
 c) Name the visualization and click ok.
 
-![Wandb Project Configuration](/images/post-4-9.png){:class="img-med"}
+![Wandb Project Configuration](/images/post-4-10.png){:class="img-med"}
 
 3) Upon finishing training the model, add our trained models to DVC by:
 
@@ -177,19 +179,19 @@ dvc push
 
 2) Modify our training script to include the Wandb configuration as follows:
 
-![Wandb Project Configuration](/images/post-4-10.png){:class="img-large"}
+![Wandb Project Configuration](/images/post-4-11.png){:class="img-large"}
 
 3) Execute the training script and view your weights and biases dashboard.
 
-![Wandb Project Configuration](/images/post-4-11.png){:class="img-large"}
+![Wandb Project Configuration](/images/post-4-12.png){:class="img-large"}
 
 Now, going back to your experiment runs, you can now see both experiments 1 and 2.
 
-![Wandb Project Configuration](/images/post-4-12.png){:class="img-large"}
+![Wandb Project Configuration](/images/post-4-13.png){:class="img-large"}
 
 You can also add custom visualizations to find correlations between hyperparameters and metrics or further compare experiments with each other.
 
-![Wandb Project Configuration](/images/post-4-13.png){:class="img-large"}
+![Wandb Project Configuration](/images/post-4-14.png){:class="img-large"}
 
 4) Upon finishing training the model, add our trained models to `dvc` by:
 
