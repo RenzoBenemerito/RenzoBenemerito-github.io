@@ -26,17 +26,25 @@ In the `Top-Down approach`, we use an object detector to get the bounding box ar
 
 In the `Bottom-Up approach`, we perform the inverse. First, we estimate the keypoints of all parts in the image. Then we use an associating algorithm to group the parts belonging to each distinct person.
 
-Which approach is better depends on the person detector for the top-down approach and the associating algorithm for the bottom-up approach.
+Which approach is better depends on the person detector for the top-down approach and the associating algorithm for the bottom-up approach. Although, it is important to note that the speed of which the Top-Down approach operates is directly proportional to the number of persons in the image, as the algorithm must perform pose estimation on each person instance detected by the object detector. Also, the Top-Down approach might have more trouble with occlusions compared to the bottom-up approach because each person instance is independent of each other.
 
 I have used a model called, openpose by researchers from the Robotics Institute of  Carnegie Mellon University. It is a bottom-up approach that, in my opinion, gives a nice trade-off between accuracy and speed.
 
 ![OpenPose Pipeline](/images/post-5.png){:class="img-large"}
-<p class="img-credits">Cheer Up by Twice</p>
+<p class="img-credits">Overall Pipeline</p>
+
+The image above illustrates an image and the transformations that happen when it passes through the openpose pipeline. It is important to note that openpose is composed of not only a deep learning model but a variety of algorithms from set theory and graph theory.
+
+
+![Whole OpenPose Pipeline](/images/post-5-1.png){:class="img-med"}
+<p class="img-credits">The Whole Openpose Pipeline. Image Source <a href="https://arvrjourney.com/human-pose-estimation-using-openpose-with-tensorflow-part-2-e78ab9104fc8"> here</a>.</p>
 
 
 
 ![Cheerup](/images/post-5-1.gif){:class="img-small"}
 <p class="img-credits">Cheer Up by Twice</p>
+
+Let's apply openpose to the GIF above.
 
 ![Cheerup](/images/post-5-2.gif){:class="img-small"}
 <p class="img-credits">Cheer Up Pose Estimation</p>
