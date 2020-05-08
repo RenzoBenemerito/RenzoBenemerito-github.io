@@ -4,7 +4,7 @@ title:  How I Manage My Machine Learning Projects
 categories: [Deep Learning, Machine Learning, Tutorial]
 ---
 
-Managing machine learning projects can be a daunting task without the proper tools to assist you. As with traditional software engineering, versioning is an essential part of the machine learning workflow. However, unlike traditional software engineering, machine learning involves massive files, consisting of datasets and model artifacts, that current version control systems do not support. In addition, machine learning experiments are evaluated by a number of metrics that need to be tracked. In this blog post, I will walk you through my personal machine learning workflow..
+Managing machine learning projects can be a daunting task without the proper tools to assist you. As with traditional software engineering, versioning is an essential part of the machine learning workflow. However, unlike traditional software engineering, machine learning involves massive files, consisting of datasets and model artifacts, that current version control systems do not support. In addition, machine learning experiments are evaluated by a number of metrics that need to be tracked. In this blog post, I will walk you through my personal machine learning workflow.
 
 ### Premise
 
