@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Social Distance Monitor Ulitizing YoloV4
+title:  Social Distance Monitoring Ulitizing YoloV4
 categories: [Deep Learning, Object Detection]
 ---
 
@@ -9,9 +9,11 @@ Two events inspired this post. On April 24, 2020, a new version of the Yolo obje
 
 ### Premise
 
-On June 1, 2020, the National Capital Region will be under General Community Quarantine from the previous Modified Enhanced Community Quarantine easing the restrictions imposed to the public.
+On June 1, 2020, the National Capital Region will be under General Community Quarantine from the previous Modified Enhanced Community Quarantine easing the restrictions imposed to the public. With this, those who are working for the industries approved by the government will be able to go back to work. As the number of cases in the Philippines is not showing signs of going down, I am deeply worried for those who will be exposed in public. For this reason, I tried to think of a system that could help in monitoring the public for their own safety.
 
 ![Philippine Covid-19 Cases Overtime](/images/post-6.png)
+<p class="img-credits">Covid Cases in the Philippines over Time. Image <a href="https://www.coronatracker.com/country/philippines/">source</a></p>
+
 
 ### AI Solution
 
@@ -55,8 +57,8 @@ def scale_back(detection, scale):
                 detection[2][1],\
                 detection[2][2],\
                 detection[2][3]
-    x *= scale[0]
-    y *= scale[1]
+    x *= scale[0] # Multiply the x and y coordinates
+    y *= scale[1] # by the scale
     w *= scale[0]
     h *= scale[1]
     xmin, ymin, xmax, ymax = convertBack(
@@ -70,7 +72,7 @@ Since we are doing social distance monitoring, we are only interested in pedestr
 def prune_and_scale(detections, scale):
     pruned_detections = []
     for detection in detections:
-        if detection[0] == b'person':
+        if detection[0] == b'person': # Check if the label is person
             scaled_detection = scale_back(detection, scale)
             pruned_detections.append(scaled_detection)
 
@@ -88,9 +90,9 @@ def get_midpoint(detection):
 
 ![Midpoint of the Bottom Two Points](/images/post-6-3.png){:class="img-small-h"}
 
-Then, we compute the distances between each and every detection with respect to our chosen point of reference. Now, there are many ways of inferring real-world distance measured from an image captured by a single camera. As an introductory project to person monitoring, I have gone the simple route explained below.
+Then, we compute the distances between each and every detection with respect to our chosen point of reference. Now, there are many ways of inferring real-world distance from an image captured by a single camera with reliable accuracy to some extent. As an introductory project to person monitoring, I have gone the simple route explained below.
 
-
+![Deployment Scenario](/images/post-6-4.png){:class="img-med"}
 
 I divided the image into three zones with respect to the `y axis`. Relative distances in images captured by cameras tend to be warped. The closer objects are to a camera, the bigger they are. Consequently, the farther objects seem to be smaller. With this, relying on a single camera can be challenging to estimate the actual size and distance of objects in images. CCTV cameras are usually situated in high elevation which alleviates the effect of warping to some extent. With this, I estimated the conversion value of the real-world distance 6ft. to image pixels. Then, since farther objects seem to be smaller, I divided the image into three with respect to their heights and assigned scale values for the distance measure accordingly. The further the person is, the less its scale value is.
 
@@ -135,23 +137,35 @@ if len(detections) > 5:
 
 ### Testing
 
+<iframe width="100%" height="550px" src="https://www.youtube.com/embed/raNHDucPK9Y" frameborder="0" allowfullscreen></iframe>
 
+As you can see, the system performs relatively well. I adjusted the conversion value for the distance and the scale multiplier for each of the zones for each video with respect to the position and elevation of the camera in the video. However, further calibration is required and more improvements can be implemented. The system can detect distance to some extent, however, the question of is the distance really 6 Ft. remains to be answered.
 
-As you can see, the system performs relatively well. I adjusted the conversion value for the distance and the scale multiplier for each of the zones for each video with respect to the position and elevation of the camera in the video. However, further calibration is required and more improvements can be implemented.
+In addition, we can see the system performing at 15-20 frames per second(`FPS`) using my `GTX 970 GPU`  while using an input resolution of `416x416` for YoloV4. Reducing the video resolution and the input resolution will greatly increase the speed of the model.
 
 
 ### Deployment Plan
 
 Now that we have a prototype how can such system be productionalized and utilized by the public? I have specifically chosen YoloV4 for this project because of its significant advantage in terms of speed compared to any other algorithm. This means that this system can run in real-time even with limited hardware.
 
+![Deployment Scenario](/images/post-6-5.png){:class="img-med"}
 
 Theoretically, we could take the live video feed from a CCTV camera and feed it to a microcomputer (NVIDIA Jetson, Raspberry Pi, etc...) where the algorithm will process the video. Another option would be to have a dedicated server connected to multiple CCTVs for multiple video processing. A speaker could also be connected to the system to alert the people if they have violated the social distancing rule.
 
 
 ### Further Improvements
 
+As discussed earlier, there are many ways to infer real-world distance from images captured by cameras with accuracy to some extent. Researchers and engineers from Landing AI, a startup founded by Andrew Ng, calibrated the monocular view of a camera to transform it into a bird’s-eye (top-down) view. According to their blog post, "This assumes that every person is standing on the same flat ground plane. From this mapping, we can derive a transformation that can be applied to the entire perspective image. ... During the calibration step, we also estimate the scale factor of the bird’s eye view, e.g. how many pixels correspond to 6 feet in real life." According to another blog post by Aqeel Anwar who used the same method as Landing AI, "This bird eye view then has the property of points (which are same number of pixels apart) being equidistant no matter where they are. All it needs is a multiplier that maps the distance between two points in pixels to distance in real life units (such as feet or meters)."
 
+Check out their blog posts here:
+
+- [Landing AI](https://landing.ai/landing-ai-creates-an-ai-tool-to-help-customers-monitor-social-distancing-in-the-workplace/)
+- [Using Python to Monitor Social Distancing in a Public Area](https://towardsdatascience.com/monitoring-social-distancing-using-ai-c5b81da44c9f)
+
+Secondly, the YoloV4 model I used was trained on the `COCO` dataset with 80 classes. Though the classes include "people/person" for pedestrian detection, it would be better to retrain the classifier to only include pedestrian as a class to make calculations faster. Also, I used an input resolution of `416x416` for YoloV4. Using a lower resolution coupled with quantization would greatly increase the speed of the algorithm.
 
 
 ### Conclusion and Implication
+
+With the current situation brought about the pandemic, strict social distancing and good personal hygiene must be exercised by the people to avoid the spread of the disease. It is amazing to see that we can utilize Artificial Intelligence to help in monitoring and enforcing these rules. Last April, a new iteration of the Yolo object detection algorithm was release which brought about improvements in accuracy and speed. It was created by a new set of authors. I find it inspiring that people are willing to take up the work of others in order to improve and push the field of AI even further. However, with the big advancements in AI, continued dialogue about AI ethics, privacy and responsibility must ensue. It is in my best hope that this pandemic end in the soonest of time. For now, let us all keep safe in the safety of our homes and if there is a need to go outside, may we abide by the rules and practice good hygiene. Lastly, I implore those who are privileged enough to help those who are not and to save not only for themselves but also for those who are less fortunate. Til the next post!
 
