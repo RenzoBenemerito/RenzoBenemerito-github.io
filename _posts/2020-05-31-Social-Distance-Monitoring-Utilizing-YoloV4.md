@@ -29,7 +29,7 @@ However, given the significant lead of Yolo in terms of speed compared to RCNN a
 
 ![Joe Redmon on Twitter](/images/post-6-2.png){:class="img-small"}
 
-Last April, while I was casually browsing the internet, in came to my surprise that YoloV4 was released. I thought to myself that Joseph might have come back to the field of research to continually improve the Yolo algorithm. To my surprise, YoloV4 had been developed by an entirely new set of researchers, Alexey Bochkovskiy, Chien-Yao Wang, and Hong-Yuan Mark Liao. In my opinion, it's nice that people are willing to continue the work of others in order to further the field of AI. I think of it as like sitting on the shoulders of giants.
+Last April, while I was casually browsing the internet, it came to my surprise that YoloV4 was released. I thought to myself that Joseph might have come back to the field of research to continually improve the Yolo algorithm. To my surprise, YoloV4 had been developed by an entirely new set of researchers, Alexey Bochkovskiy, Chien-Yao Wang, and Hong-Yuan Mark Liao. In my opinion, it's nice that people are willing to continue the work of others in order to further the field of AI. I think of it as like sitting on the shoulders of giants.
 
 To check out what's new in YoloV4, refer to the following:
 
