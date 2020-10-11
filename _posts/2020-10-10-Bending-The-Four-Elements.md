@@ -57,7 +57,7 @@ const poseNetState = {
 
 ### Try It!
 
-Download the repo here: [Repo]()
+Download the repo here: [Repo](https://github.com/RenzoBenemerito/Avatar-PoseNet)
 
 Run a web server by running the following command:
 
@@ -95,8 +95,16 @@ If you have a laptop with an Nvidia GPU that has Optimus technology, make sure t
 
 Check this link to see if your browser is using your GPU [link](https://alteredqualia.com/tmp/webgl-maxparams-test/). It should display your GPU on the unmasked renderer field.
 
+![Earth Bending](/images/post-7-6.png){:class="img-med"}
+
+
+### Further Improvements
+
+The action recognition algorithm used for this project is barebones in and of itself. You'll find innacuracies in punch and kick recognition from time to time because of the inherent flaw of the moving average over time implementation when applied to action recognition. Synchronization errors can occur when using this method and it does not really discriminate on the x axis in this implementation. Lastly, the algorithm runs slow on laptops with low-tier GPUs let alone CPU only ones so there is variability in the window we use for moving average.  
 
 
 ### Conclusion
 
-Avatar has always been one of my favorite TV series. It was a pleasure to dedicate an AI project for the show. This is also my first project using Tensorflow JS and I am hoping for more projects in the future. Feel free to fork the repository and improve upon the project as I know that the motion identification algorithm for punches and kicks is pretty bare-bones in and on itself. As always, til next post!
+Avatar has always been one of my favorite TV series. It was a pleasure to dedicate an AI project for the show. This is also my first project using Tensorflow JS and I am hoping for more projects in the future. Feel free to fork the repository and improve upon the project as I know that the action recognition algorithm for punches and kicks is pretty basic. As always, til next post!
+
+<iframe width="100%" height="550px" src="https://www.youtube.com/embed/egZ9osc29Aw" frameborder="0" allowfullscreen></iframe>
