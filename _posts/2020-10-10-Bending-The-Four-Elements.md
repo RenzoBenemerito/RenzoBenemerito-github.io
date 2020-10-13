@@ -105,6 +105,6 @@ The action recognition algorithm used for this project is barebones in and of it
 
 ### Conclusion
 
-Avatar has always been one of my favorite TV series. It was a pleasure to dedicate an AI project for the show. This is also my first project using Tensorflow JS and I am hoping for more projects in the future. Feel free to fork the repository and improve upon the project as I know that the action recognition algorithm for punches and kicks is pretty basic. As always, til next post!
+Avatar has always been one of my favorite TV series. It was a pleasure to dedicate an AI project for the show. This is also my first project using Tensorflow JS and I am hoping for more projects in the future. Truly, pose estimation has the potential to augment the existing tools in the motion graphics and augmented reality fields. Once 3D pose estimation matures to a state that is accurate enough in all conditions and relatively feasible to run on existing machines, we could possibly see shows and movies made with this technology. For now, feel free to fork the repository and improve upon the project as I know that the action recognition algorithm for punches and kicks is pretty basic. As always, til next post!
 
 <iframe width="100%" height="550px" src="https://www.youtube.com/embed/egZ9osc29Aw" frameborder="0" allowfullscreen></iframe>
